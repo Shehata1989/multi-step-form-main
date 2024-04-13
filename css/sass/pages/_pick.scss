@@ -1,0 +1,94 @@
+aside {
+  ul {
+    li:nth-of-type(3)::before {
+      background-color: $Light-blue;
+      color: black;
+    }
+  }
+}
+.select-plan {
+  form {
+    .section-checkbox {
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: $Magnolia;
+        padding: 20px;
+        border-radius: 10px;
+        &:not(.profile) {
+          margin-bottom: 20px;
+        }
+        &:hover {
+          outline: 2px solid $Pastel-blue;
+        }
+        &:has(input:checked) {
+          outline: 2px solid $Pastel-blue;
+        }
+        &:has(input:checked) .input::after {
+          left: 0;
+          top: -7px;
+          transform: scale(1);
+        }
+        .input {
+          position: relative;
+          input {
+            display: none;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            border: 1px solid #333;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+          }
+          &::after {
+            font-family: var(--fa-style-family-classic);
+            content: '\f00c';
+            font-size: 10px;
+            font-weight: 900;
+            color: $White;
+            @include flex-c;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            left: 0;
+            top: -7px;
+            background-color: $Purplish-blue;
+            transform: scale(0) rotate(360deg);
+            transition: 0.5s;
+          }
+        }
+          label {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+            cursor: pointer;
+            .text {
+              span {
+                display: block;
+              }
+              span:first-child {
+                color: $Marine-blue;
+                font-weight: 600;
+                margin-bottom: 5px;
+              }
+              span:last-child {
+                color: $Cool-gray;
+              }
+            }
+            span {
+              color: $Purplish-blue;
+            }
+          }
+        }
+      }
+    }
+  }

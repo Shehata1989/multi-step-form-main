@@ -1,0 +1,45 @@
+.container {
+    aside {
+      @include media (mobile) {
+        display: none;
+      }
+      background-image: url(/assets/images/bg-sidebar-desktop.svg);
+      width: 274px;
+      height: 568px;
+      padding: 30px 0 0 70px;
+      ul {
+        li {
+          margin-bottom: 30px;
+          counter-increment: order-list;
+          position: relative;
+          &::before {
+            content: counter(order-list);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1px solid $White;
+            color: $White;
+            font-weight: bold;
+            @include flex-c;
+          }
+          span {
+            color: $Cool-gray;
+            font-weight: bold;
+            font-size: 14px;
+          }
+          p {
+            margin: 3px 0;
+            color: $Alabaster;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+

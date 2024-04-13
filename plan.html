@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/select-plan.css" />
+
+    <title>Select your plan</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <aside>
+          <ul>
+            <li>
+              <span>Step 1</span>
+              <p>Your info</p>
+            </li>
+            <li>
+              <span>Step 2</span>
+              <p>Select plan</p>
+            </li>
+            <li>
+              <span>Step 3</span>
+              <p>Add-ons</p>
+            </li>
+            <li>
+              <span>Step 4</span>
+              <p>Summary</p>
+            </li>
+          </ul>
+        </aside>
+        <div class="center">
+          <section class="select-plan">
+            <div class="heading">
+              <h1>Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </div>
+            <form>
+              <div class="radio">
+                <div>
+                  <input type="radio" name="plan" id="radio" checked />
+                  <label class="radio" for="radio">
+                    <img src="assets/images/icon-arcade.svg" alt="" />
+                    <p>Arcade</p>
+                    <span>$9/mo</span>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="plan" id="radio-2" />
+                  <label class="radio" for="radio-2">
+                    <img src="assets/images/icon-advanced.svg" alt="" />
+                    <p>Advanced</p>
+                    <span>$12/mo</span>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="plan" id="radio-3" />
+                  <label class="radio" for="radio-3">
+                    <img src="assets/images/icon-pro.svg" alt="" />
+                    <p>Pro</p>
+                    <span>$15/mo</span>
+                  </label>
+                </div>
+              </div>
+              <div class="checkbox">
+                <span>Yearly</span>
+                <input id="checkbox" type="checkbox" name="monthly" checked />
+                <label for="checkbox"></label>
+                <span>Monthly</span>
+              </div>
+              <div class="links">
+                <a href="index.html">Go Back</a>
+                <a href="pick.html">Next Step</a>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

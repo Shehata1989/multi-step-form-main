@@ -1,0 +1,65 @@
+aside {
+  ul {
+    li:nth-of-type(1)::before {
+      background-color: $Light-blue;
+      color: black;
+    }
+  }
+}
+  .personal-info {
+    form {
+      & .label {
+        display: flex;
+        justify-content: space-between;
+        .required {
+          color: $Strawberry-red;
+          font-size: 14px;
+          transition: 0.3s;
+          opacity: 0;
+        }
+      }
+      > div {
+        margin-bottom: 30px;
+      }
+      span {
+        display: block;
+        margin-bottom: 10px;
+        color: $Marine-blue;
+        font-weight: 500;
+      }
+      input {
+        @include reset-input;
+        @include border-1;
+        @include border-radius-10;
+        padding: 10px 15px;
+        width: 100%;
+        transition: 0.3s;
+        &::placeholder {
+          color: $Cool-gray;
+        }
+        &:hover {
+          border: 1px solid $Pastel-blue;
+        }
+        &:focus {
+          border: 1px solid $Strawberry-red;
+        }
+        &:focus::placeholder {
+          opacity: 0;
+        }
+      }
+      a {
+        @include btn-shape;
+        margin-top: 60px;
+        margin-left: auto;
+        background-color: $Marine-blue;
+        background-position: right bottom;
+        transition: 0.3s;
+        &:hover {
+          background: linear-gradient(to right, $Purplish-blue 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: left bottom;
+        }
+      }
+    }
+  }
+

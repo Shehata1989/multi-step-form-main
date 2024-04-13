@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.container aside {
+  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  width: 274px;
+  height: 568px;
+  padding: 30px 0 0 70px; }
+  @media (max-width: 767px) {
+    .container aside {
+      display: none; } }
+  .container aside ul li {
+    margin-bottom: 30px;
+    counter-increment: order-list;
+    position: relative; }
+    .container aside ul li::before {
+      content: counter(order-list);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid white;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .container aside ul li span {
+      color: #9699ab;
+      font-weight: bold;
+      font-size: 14px; }
+    .container aside ul li p {
+      margin: 3px 0;
+      color: #fafbff;
+      font-weight: 500;
+      text-transform: uppercase; }
+
+/*! Fonts Google*/
+/*! End Fonts Google*/
+/*! Global Rules*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif; }
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f6ff; }
+  @media (max-width: 767px) {
+    .page {
+      background: url(/assets/images/bg-sidebar-mobile.svg) no-repeat;
+      background-size: contain; } }
+
+.container {
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd; }
+  @media (max-width: 767px) {
+    .container {
+      margin: 10px; } }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+input {
+  border: none;
+  outline: none; }
+  input:focus {
+    outline: none; }
+
+/*! End Global Rules*/
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center; }
+  .center section {
+    padding-top: 40px; }
+    @media (max-width: 767px) {
+      .center section {
+        padding: 0; } }
+    .center section .heading h1 {
+      color: #02295a;
+      margin: 0 0 10px; }
+    .center section .heading p {
+      color: #9699ab;
+      margin: 0 0 30px; }
+    .center section .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      align-items: end;
+      height: 130px; }
+      .center section .links a:first-child {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background: linear-gradient(to right, #bfe2fd 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: 0.3s; }
+        .center section .links a:first-child:hover {
+          background-size: 200% 100%;
+          background-position: left bottom; }
+      .center section .links a:last-child {
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #02295a;
+        background-position: right bottom;
+        transition: 0.3s; }
+        .center section .links a:last-child:hover {
+          background: linear-gradient(to right, #473dff 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: left bottom; }
+
+aside ul li:nth-of-type(1)::before {
+  background-color: #bfe2fd;
+  color: black; }
+
+.personal-info form .label {
+  display: flex;
+  justify-content: space-between; }
+  .personal-info form .label .required {
+    color: #ed3548;
+    font-size: 14px;
+    transition: 0.3s;
+    opacity: 0; }
+.personal-info form > div {
+  margin-bottom: 30px; }
+.personal-info form span {
+  display: block;
+  margin-bottom: 10px;
+  color: #02295a;
+  font-weight: 500; }
+.personal-info form input {
+  border: none;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  transition: 0.3s; }
+  .personal-info form input:focus {
+    outline: none; }
+  .personal-info form input::placeholder {
+    color: #9699ab; }
+  .personal-info form input:hover {
+    border: 1px solid #adbeff; }
+  .personal-info form input:focus {
+    border: 1px solid #ed3548; }
+  .personal-info form input:focus::placeholder {
+    opacity: 0; }
+.personal-info form a {
+  display: block;
+  width: fit-content;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  overflow: none;
+  margin-top: 60px;
+  margin-left: auto;
+  background-color: #02295a;
+  background-position: right bottom;
+  transition: 0.3s; }
+  .personal-info form a:hover {
+    background: linear-gradient(to right, #473dff 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: left bottom; }
+
+/*# sourceMappingURL=personal-info.css.map */

@@ -1,0 +1,123 @@
+/*! Fonts Google*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*! End Fonts Google*/
+/*! Global Rules*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.page {
+  @include media(mobile) {
+    background: url(/assets/images/bg-sidebar-mobile.svg) no-repeat;
+    background-size: contain;
+  }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Magnolia;
+}
+
+.container {
+  @include media(mobile) {
+    margin: 10px;
+  }
+  padding: 15px;
+  background-color: $White;
+  display: flex;
+  gap: 20px;
+  @include border-radius-10;
+  @include box-shadow;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  @include reset-ul;
+}
+
+a {
+  @include reset-links;
+}
+
+input {
+  @include reset-input;
+}
+/*! End Global Rules*/
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  section {
+    @include media(mobile) {
+      padding: 0;
+    }
+    padding-top: 40px;
+    .heading {
+      h1 {
+        color: $Marine-blue;
+        margin: 0 0 10px;
+      }
+      p {
+        color: $Cool-gray;
+        margin: 0 0 30px;
+      }
+    }
+    .links {
+      @include between-flex;
+      align-items: end;
+      height: 130px;
+      a:first-child {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background: linear-gradient(to right, $Light-blue 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: 0.3s;
+        &:hover {
+          background-size: 200% 100%;
+          background-position: left bottom;
+        }
+      }
+      a:last-child {
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: $Marine-blue;
+        background-position: right bottom;
+        transition: 0.3s;
+        &:hover {
+          background: linear-gradient(to right, $Purplish-blue 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: left bottom;
+        }
+      }
+    }
+  }
+}
